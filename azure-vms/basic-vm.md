@@ -1,8 +1,8 @@
-Prompt:
+### Prompt:
 
 Can you provide a bicep template to create a basic windows virtual machine on a default subnet in Azure?
 
-Chat GPT 4 Response:
+### Chat GPT 4 Response:
 
 Sure, here's a basic example of a Bicep template to create a Windows virtual machine on a default subnet in Azure. Please modify the values as per your requirements:
 
@@ -91,3 +91,18 @@ Please note:
 - For the admin password, it is marked as secure which means it won't be stored or logged anywhere in plain text.
 - This script assumes that the VNet and subnet are pre-existing resources, if they are not, you will need to create them.
 - Also, the VM created here is of size 'Standard_A1_v2'. You may need to adjust this based on your requirements.
+
+
+
+
+### Result:
+
+The code provided by the model has some issues. The "secure" property in the password param is a bit scrambled, instead of this:
+  param adminPassword string {
+    secure: true
+  }
+
+Azure has a @secure() decorator you can add to passwords, ensuring the value isn't logged or stored:
+
+  @secure()
+  param adminPassword string

@@ -1,8 +1,8 @@
-Prompt:
+### Prompt:
 
 Can you create a Bicep template for an azure virtual network? Include a default subnet.
 
-Chat GPT-4 Response:
+### Chat GPT-4 Response:
 
 Sure! Here's an example of a Bicep template to create a Virtual Network (VNet) with a default subnet in Azure. You can modify the values as per your requirements:
 
@@ -43,6 +43,8 @@ This example assumes a CIDR notation for the address prefixes. '10.0.0.0/16' for
 
 
 
-Result:
+### Result:
 
-The bicep template deployed without any modifications. 
+The bicep file was successfully deployed without modification using this command:  
+
+    az deployment group create --resource-group Network-Learning-RG --template-file azure-networks/basic-network.bicep --parameters vnetName=vnettest
