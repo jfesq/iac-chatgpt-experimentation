@@ -98,11 +98,13 @@ Please note:
 ### Result:
 
 The code provided by the model has some issues. The "secure" property in the password param is a bit scrambled, instead of this:
+```
   param adminPassword string {
     secure: true
   }
-
+```
 Azure has a @secure() decorator you can add to passwords, ensuring the value isn't logged or stored:
-
+```
   @secure()
   param adminPassword string
+```
