@@ -1,19 +1,18 @@
 param location string = resourceGroup().location
 param vmName string
 param adminUsername string
-param adminPassword string {
-  secure: true
-}
+@secure()
+param adminPassword string
 param vnetName string
 param subnetName string
 param nicName string
-param publicIpName string
+// param publicIpName string
 param diskName string
 
 var windowsOSVersion = '2019-Datacenter'
 var vmSize = 'Standard_A1_v2'
 
-resource vnet 'Microsoft.Network/virtualNetworks@2020-08-01' existing = {
+resource vnet 'Microsoft.Compute/virtualMachines@2022-11-01' existing = {
   name: vnetName
 }
 

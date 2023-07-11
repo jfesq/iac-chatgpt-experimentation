@@ -93,8 +93,6 @@ Please note:
 - Also, the VM created here is of size 'Standard_A1_v2'. You may need to adjust this based on your requirements.
 
 
-
-
 ### Result:
 
 The code provided by the model has some issues. The "secure" property in the password param is a bit scrambled, instead of this:
@@ -108,3 +106,7 @@ Azure has a @secure() decorator you can add to passwords, ensuring the value isn
   @secure()
   param adminPassword string
 ```
+
+Some other nit-picky things:
+- ChatGPT has provided an unused variable: publicIpName, this is easy to remove.
+- The resource provided should be "Microsoft.Compute/virtualMachines@2022-11-01", rather than "Microsoft.Network/virtualNetworks@2020-08-01"
