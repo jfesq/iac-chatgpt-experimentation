@@ -12,7 +12,7 @@ param diskName string
 var windowsOSVersion = '2019-Datacenter'
 var vmSize = 'Standard_A1_v2'
 
-resource vnet 'Microsoft.Compute/virtualMachines@2022-11-01' existing = {
+resource vnet 'Microsoft.Network/virtualNetworks@2020-08-01' existing = {
   name: vnetName
 }
 
@@ -39,7 +39,7 @@ resource nic 'Microsoft.Network/networkInterfaces@2020-08-01' = {
   }
 }
 
-resource vm 'Microsoft.Compute/virtualMachines@2020-06-01' = {
+resource vm 'Microsoft.Compute/virtualMachines@2022-11-01' = {
   name: vmName
   location: location
   properties: {
