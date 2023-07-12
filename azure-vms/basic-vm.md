@@ -109,4 +109,4 @@ Azure has a @secure() decorator you can add to passwords, ensuring the value isn
 
 Some other nit-picky things:
 - ChatGPT has provided an unused variable: publicIpName, this is easy to remove.
-- The resource provided should be "Microsoft.Compute/virtualMachines@2022-11-01", rather than "Microsoft.Network/virtualNetworks@2020-08-01"
+- The resource provided should be "Microsoft.Compute/virtualMachines@2022-11-01", rather than "Microsoft.Compute/virtualMachines@2020-06-01", in fact all of these can be updated.
