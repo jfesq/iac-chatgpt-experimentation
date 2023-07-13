@@ -4,7 +4,7 @@ param vnetAddressPrefix string = '10.0.0.0/16'
 param defaultSubnetName string = 'default'
 param defaultSubnetAddressPrefix string = '10.0.0.0/24'
 
-resource vnet 'Microsoft.Network/virtualNetworks@2020-08-01' = {
+resource vnet 'Microsoft.Network/virtualNetworks@2023-02-01' = {
   name: vnetName
   location: location
   properties: {

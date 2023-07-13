@@ -45,6 +45,8 @@ This example assumes a CIDR notation for the address prefixes. '10.0.0.0/16' for
 
 ### Result:
 
-The bicep file was successfully deployed without modification using this command:  
+- We can update the resource version string to "Microsoft.Network/virtualNetworks@2023-02-01"
+- This is a very simple network, with no security considerations. 
+- The bicep file was successfully deployed using this command:  
 
     az deployment group create --resource-group Network-Learning-RG --template-file azure-networks/basic-network.bicep --parameters vnetName=vnettest

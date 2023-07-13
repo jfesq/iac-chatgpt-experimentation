@@ -95,7 +95,7 @@ Please note:
 
 ### Result:
 
-The code provided by the model has some issues. The "secure" property in the password param is a bit scrambled, instead of this:
+The code provided by the model has some issues. The "secure" property in the password param is a bit scrambled:
 ```
   param adminPassword string {
     secure: true
@@ -107,6 +107,6 @@ Azure has a @secure() decorator you can add to passwords, ensuring the value isn
   param adminPassword string
 ```
 
-Some other nit-picky things:
+Some other small corrections:
 - ChatGPT has provided an unused variable: publicIpName, this is easy to remove.
 - The resource provided should be "Microsoft.Compute/virtualMachines@2022-11-01", rather than "Microsoft.Compute/virtualMachines@2020-06-01", in fact all of these can be updated.
