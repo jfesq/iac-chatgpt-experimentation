@@ -50,3 +50,7 @@ This example assumes a CIDR notation for the address prefixes. '10.0.0.0/16' for
 - The bicep file was successfully deployed using this command:  
 
     az deployment group create --resource-group Network-Learning-RG --template-file azure-networks/basic-network.bicep --parameters vnetName=vnettest
+
+
+
+[Back to readme.md](../readme.md)
