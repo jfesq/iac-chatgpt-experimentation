@@ -109,7 +109,9 @@ Azure has a @secure() decorator you can add to passwords, ensuring the value isn
 
 Some other small corrections:
 - ChatGPT has provided an unused variable: publicIpName, this is easy to remove.
+
 - The resource version should be "Microsoft.Compute/virtualMachines@2022-11-01", rather than "Microsoft.Compute/virtualMachines@2020-06-01", in fact, all of these can be updated.
+
 - As stated above in Chat-GPT's explanatory text, the script relies on a few things to be created before it would work. Overall, it's not a complete answer to the original question. 
 
 - After I went though the above exercise, I found [this Microsoft Quickstart](https://learn.microsoft.com/en-us/azure/virtual-network/quick-create-bicep?tabs=azure-cli#create-the-virtual-network-and-vms) which essentially contains the response I was hoping for from Chat-GPT. 
